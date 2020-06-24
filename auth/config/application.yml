@@ -9,3 +9,8 @@ datasource:
   password: 940213
   database: vue_gin
   charset: utf8mb4
+
+-
+  - Cat
+  - Dog
+  - Goldfish

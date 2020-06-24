@@ -1,15 +1,19 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+
+	"g1/topic/src"
 )
 
 func main()  {
 	r := gin.Default()
-	r.GET("/topic/:topic_id", func(ctx *gin.Context) {
-		ctx.String(http.StatusOK, "帖子id为%s", ctx.Param("topic_id"))
-	})
+	v1 := r.Group("/v1/topics")
+	v1.Use(src.MustLogin())
+	{
+		v1.GET("/:topic_id", src.GetTopicDetail)
+		v1.POST("", src.NewTopic)
+		v1.DELETE("/:topic_id", src.DelTopic)
+	}
 	r.Run(":8080")
 }
