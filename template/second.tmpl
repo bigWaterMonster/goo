@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+{{/*  hello world  */}}
+{{kua .}}
+{{template "ul.tmpl"}}
+{{template "ol.tmpl"}}
+<body>
+</body>
+</html>
+{{/*内部模版*/}}
+{{define "ol.tmpl"}}
+<ol>
+    <li>呀</li>
+    <li>可</li>
+    <li>洗</li>
+</ol>
+{{end}}

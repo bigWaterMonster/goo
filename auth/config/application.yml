@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+datasource:
+  driver: mysql
+  host: 49.234.156.231
+  port: 3306
+  user: root
+  password: 940213
+  database: vue_gin
+  charset: utf8mb4

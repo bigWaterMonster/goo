@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+{{/*  hello world  */}}
+<body>
+<p>hello ! {{.name}}</p>
+<p>hello ! {{.gender}}</p>
+<p>hello ! {{.age}}</p>
+<p>hello ! {{.hobby }}</p>
+<p>hello ! {{index .hobby 3 }}</p>
+{{ range $index, $hobby := .hobby }}
+    <p>{{$index}}-{{$hobby}}</p>
+    {{else}}
+    木有爱好
+{{ end }}
+{{ $name := .name }}
+{{- $name -}}!{{- $name -}}
+{{ $v := 100 }}
+{{ if gt $v 20  }}
+    <div>你好</div>
+{{ else }}
+    <div>吃大便</div>
+{{end}}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>hello world</div>
+    <div><%.title%></div>
+    <form enctype="multipart/form-data" action="/upload" method="post">
+        <input type="file" name="ff" multiple>
+        <input type="file" name="file">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        function cb (answer) {
+            console.log(answer)
+        }
+        const sc = document.createElement("script")
+        sc.src = "http://127.0.0.1:8080/JSONP?callback=cb"
+        document.body.appendChild(sc)
+    </script>
+</body>
+</html>

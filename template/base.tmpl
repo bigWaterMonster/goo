@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>模版继承</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            background: cadetblue;
+            top: 0
+        }
+
+        .main {
+            margin-top: 0
+        }
+
+        .menu {
+            width: 20%;
+            height: calc(100% - 50px);
+            position: fixed;
+            top: 50px;
+            background: aqua;
+        }
+
+        .content {
+            position: absolute;
+            top: 50px;
+            left: 20%;
+        }
+    </style>
+</head>
+<body>
+<div class="nav"></div>
+<div class="main">
+    <div class="menu"></div>
+    <div class="content">
+        {{ block "content" .}}
+        {{ end }}
+    </div>
+</div>
+</body>
+</html>
