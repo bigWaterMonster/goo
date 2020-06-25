@@ -32,6 +32,3 @@ func PostJson() {
 	PrintBody(res)
 }
 
-func main() {
-	PostJson()
-}
